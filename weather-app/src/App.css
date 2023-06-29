@@ -1,0 +1,54 @@
+.searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+.searchBox input,
+.searchBox button,
+.btnContainer button {
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  flex: 3;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  flex: 1;
+  border-left: 2px solid #000;
+  padding: 10px;
+}
+
+.right > div {
+  cursor: pointer;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  position: fixed;
+  top: 20px;
+  right: 50px;
+}
