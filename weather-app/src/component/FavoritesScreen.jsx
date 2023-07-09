@@ -47,7 +47,7 @@ const FavoritesScreen = () => {
                 localizedName={currentWeather.localizedName}
                 cityKey={currentWeather.cityKey}
                 temperatureCelsius={currentWeather.temperatureCelsius}
-                weatherText={currentWeather.WeatherText}
+                weatherText={currentWeather.weatherText}
                 handleDelete={handleDelete}
               />
             </div>

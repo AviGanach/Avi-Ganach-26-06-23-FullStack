@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../database');
 
-const WeatherData = sequelize.define('WeatherDataTable', {
+const WeatherData = sequelize.define("WeatherDataTable", {
   cityKey: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -10,14 +10,14 @@ const WeatherData = sequelize.define('WeatherDataTable', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  WeatherText: {
+  weatherText: {
     type: DataTypes.STRING,
     allowNull: false,
   },
   createdAt: {
     type: DataTypes.DATEONLY,
     allowNull: false,
-    defaultValue: sequelize.literal('CURRENT_DATE'),
+    defaultValue: DataTypes.NOW,
   },
   
 },
@@ -27,7 +27,8 @@ const WeatherData = sequelize.define('WeatherDataTable', {
 });
 
 // Add the sync method to automatically create the table
-   WeatherData.sync()
+  //  WeatherData.sync()
+  WeatherData.sync({ alter: true })
   .then(() => {
     console.log('WeatherDataTable has been synchronized');
   })

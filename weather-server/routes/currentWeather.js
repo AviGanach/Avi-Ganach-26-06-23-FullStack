@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
       await WeatherData.create({
         cityKey,
         temperatureCelsius: Temperature.Metric.Value,
-        WeatherText: WeatherText,
+        weatherText: WeatherText,
       });
       // Send data to client
       return res.json({

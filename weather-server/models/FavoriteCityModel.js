@@ -1,10 +1,8 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../database");
 
-const FavoriteCity = sequelize.define(
-  "favoritecityes",
-  {
-    cityKey: {
+const FavoriteCity = sequelize.define("favoritecityes", {
+      cityKey: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -19,9 +17,8 @@ const FavoriteCity = sequelize.define(
 );
 
 // Add the sync method to automatically create the table
-FavoriteCity.sync()
-
-  // WeatherData.sync({ alter: true })
+// FavoriteCity.sync()
+FavoriteCity.sync({ alter: true })
   .then(() => {
     console.log("FavoriteCity has been synchronized");
   })

@@ -20,12 +20,12 @@ const MainScreen = () => {
     }
   };
 
-  const handleCityClick = async (cityKey, LocalizedName) => {
+  const handleCityClick = async (cityKey, localizedName) => {
     try {
       const response = await axios.get(
         `http://localhost:3004/api/currentWeather/?cityKey=${cityKey}`
       );
-      setSelectedCityName(LocalizedName);
+      setSelectedCityName(localizedName);
       setCurrentWeather(response.data);
     } catch (error) {}
   };
@@ -51,7 +51,7 @@ const MainScreen = () => {
                 localizedName={selectedCityName}
                 cityKey={currentWeather.cityKey}
                 temperatureCelsius={currentWeather.temperatureCelsius}
-                weatherText={currentWeather.WeatherText}
+                weatherText={currentWeather.weatherText}
               />
             </div>
           )}
